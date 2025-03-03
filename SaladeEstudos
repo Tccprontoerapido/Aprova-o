@@ -8,8 +8,8 @@ class AprovaçãoSaladeEstudos:
         Inicializa a classe com as informações da Aprovação Sala de Estudos.
         """
         self.nome = "Aprovação Sala de Estudos"
-        self.endereco = "Rua Voluntários da Pátria 301, sala 701, Botafogo, Rio de Janeiro, RJ"
-        self.telefone = "21 99432-1982"
+        self.endereco = ""
+        self.telefone = ""
         self.email = "contato@saladefoco.com.br"
         self.site = "https://saladefoco.com.br/"
         self.horarios = {
@@ -19,19 +19,20 @@ class AprovaçãoSaladeEstudos:
         }
         self.planos = {
             "um_turno": {
-                "seg_a_sex": 200,
-                "sab_e_dom": 250,
-                "todos_os_dias": 300,
+                "seg_a_sex": ,
+                "sab_e_dom": ,
+                "todos_os_dias": ,
             },
             "dois_turnos": {
-                "seg_a_sex": 350,
-                "sab_e_dom": 400,
-                "todos_os_dias": 450,
+                "seg_a_sex": 
+,
+                "sab_e_dom": ,
+                "todos_os_dias": ,
             },
             "tres_turnos": {
-                "seg_a_sex": 500,
-                "sab_e_dom": 550,
-                "todos_os_dias": 600,
+                "seg_a_sex": ,
+                "sab_e_dom":,
+                "todos_os_dias":,
             },
         }
 
