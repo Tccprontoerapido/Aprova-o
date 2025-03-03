@@ -1,6 +1,6 @@
 class AprovaçãoSaladeEstudos:
     """
-    Classe que representa a Aprovação Sala de Estudos, um local tranquilo para estudar localizado no Rio de Janeiro, RJ.
+    Classe que representa a Aprovação Sala de Estudos, um local tranquilo para estudar localizado no .
     """
 
     def __init__(self):
@@ -10,8 +10,8 @@ class AprovaçãoSaladeEstudos:
         self.nome = "Aprovação Sala de Estudos"
         self.endereco = ""
         self.telefone = ""
-        self.email = "contato@saladefoco.com.br"
-        self.site = "https://saladefoco.com.br/"
+        self.email = "contato"
+        self.site = "https:///"
         self.horarios = {
             "manha": "06h/12h",
             "tarde": "12h/18h",
