@@ -15,7 +15,7 @@ class AprovaçãoSaladeEstudos:
         }
         self.planos = {
             "um_turno": {
-                "seg_a_sex": "100",
+                "seg_a sex": "100",
                 "sab_e_dom": "150",
                 "todos_os_dias": "200",
             },
