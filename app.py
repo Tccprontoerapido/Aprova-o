@@ -8,7 +8,7 @@ class AprovaçãoSaladeEstudos:
         self.telefone = "5581997064169"
         self.email = "contato@example.com"
         self.site = "https:///"
-        self.horarios = {
+        self.horários = {
             "manha": "06h/12h",
             "tarde": "12h/18h",
             "noite": "18h/00h",
