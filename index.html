@@ -17,22 +17,20 @@
             font-size: 1.5em;
             position: relative;
         }
-        .header .left {
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-size: 1.2em;
-            color: white;
-        }
         .nav {
+            background-color: white;
+            width: 100%;
+            padding: 10px 0;
             display: flex;
             justify-content: center;
             gap: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2em;
+            color: black;
         }
         .nav a {
-            color: white;
+            color: black;
             text-decoration: none;
-            font-size: 1.2em;
         }
         .sub-header {
             background-color: white;
@@ -72,15 +70,15 @@
     </style>
 </head>
 <body>
+    <div class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#endereco">Endereço</a>
+        <a href="#contato">Contato</a>
+    </div>
     <div class="header">
         <div class="left">{{ sala.nome.split()[0] }}</div>
-        <div class="nav">
-            <a href="#sobre">Sobre</a>
-            <a href="#como-funciona">Como Funciona</a>
-            <a href="#planos">Planos</a>
-            <a href="#endereco">Endereço</a>
-            <a href="#contato">Contato</a>
-        </div>
     </div>
     <div class="sub-header">
         <div></div>
