@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>{{ sala.nome }}</title>
     <style>
         .header {
-            background-color: limegreen; /* Lime green background */
+            background-color: limegreen;
             width: 100%;
-            height: 200px; /* Smaller height */
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -48,45 +48,37 @@
 </head>
 <body>
     <div class="header">
-        <div class="left">Aprovação</div>
+        <div class="left">{{ sala.nome.split()[0] }}</div>
     </div>
     <div class="sub-header">
-        <div>Aprovação Sala de Estudos</div>
-        <div class="right"><a href="tel:+5581997064169">Entre em Contato</a></div>
+        <div></div>
+        <div class="right"><a href="tel:+{{ sala.telefone }}">Entre em Contato</a></div>
     </div>
-    <p>Endereço: </p>
-    <p>Telefone: 5581997064169</p>
-    <p>Email: </p>
-    <p>Site: <a href="https:///">https:///</a></p>
+    <p>Endereço: {{ sala.endereco }}</p>
+    <p>Telefone: {{ sala.telefone }}</p>
+    <p>Email: {{ sala.email }}</p>
+    <p>Site: <a href="{{ sala.site }}">{{ sala.site }}</a></p>
     <h2>Horários</h2>
     <ul>
-        <li>Manhã: 06h/12h</li>
-        <li>Tarde: 12h/18h</li>
-        <li>Noite: 18h/00h</li>
+        {% for turno, horario in sala.horarios.items() %}
+        <li>{{ turno.capitalize() }}: {{ horario }}</li>
+        {% endfor %}
     </ul>
     <h2>Planos</h2>
     <ul>
-        <li>Um turno:</li>
+        {% for plano, valores in sala.planos.items() %}
+        <li>{{ plano.replace('_', ' ').capitalize() }}:</li>
         <ul>
-            <li>Seg a Sex: R$ </li>
-            <li>Sab e Dom: R$ </li>
-            <li>Todos os dias: R$ </li>
+            {% for periodo, preco in valores.items() %}
+            <li>{{ periodo.replace('_', ' ').capitalize() }}: R$ {{ preco }}</li>
+            {% endfor %}
         </ul>
-        <li>Dois turnos:</li>
-        <ul>
-            <li>Seg a Sex: R$ </li>
-            <li>Sab e Dom: R$ </li>
-            <li>Todos os dias: R$ </li>
-        </ul>
-        <li>Três turnos:</li>
-        <ul>
-            <li>Seg a Sex: R$ </li>
-            <li>Sab e Dom: R$ </li>
-            <li>Todos os dias: R$ </li>
-        </ul>
+        {% endfor %}
     </ul>
     <h2>Opções adicionais</h2>
-    <p>Agende sua visita gratuita através do site de reservas: <a href="https:///">https:///</a></p>
-    <p>Para alugar uma cabine de estudo, entre em contato com a Aprovação Sala de Estudos pelo telefone ou email:, contato</p>
+    <p>Agende sua visita gratuita através do site de reservas: <a href="{{ sala.site }}">{{ sala.site }}</a></p>
+    <p>Para alugar uma cabine de estudo, entre em contato com a Aprovação Sala de Estudos pelo telefone ou email:</p>
+    <p>{{ sala.telefone }}</p>
+    <p>{{ sala.email }}</p>
 </body>
 </html>
