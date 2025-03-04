@@ -52,6 +52,14 @@
             display: flex;
             justify-content: space-between;
             padding: 10px 20px;
+            position: relative;
+        }
+        .sub-header .left {
+            font-size: 1.5em;
+            font-weight: bold;
+            position: absolute;
+            left: 20px;
+            top: 10px;
         }
         .sub-header .right {
             font-size: 1em;
@@ -88,10 +96,10 @@
     </div>
     <div class="spacer"></div>
     <div class="header">
-        <div class="left">{{ sala.nome.split()[0] }}</div>
+        <!-- Removed the name from here -->
     </div>
     <div class="sub-header">
-        <div></div>
+        <div class="left">{{ sala.nome }}</div>
         <div class="right"></div>
     </div>
     
@@ -125,15 +133,15 @@
         {% endfor %}
     </ul>
     
-    <h2 id="horarios">Horários</h2>
+    <h2 id="horários">Horários</h2>
     <ul>
         {% for turno, horario in sala.horarios.items() %}
         <li>{{ turno.capitalize() }}: {{ horario }}</li>
         {% endfor %}
     </ul>
     
-    <h2 id="endereco">Endereço</h2>
-    <p>{{ sala.endereco }}</p>
+    <h2 id="endereço">Endereço</h2>
+    <p>{{ sala.endereço }}</p>
     
     <h2 id="contato">Contato</h2>
     <p>{{ sala.telefone }}</p>
