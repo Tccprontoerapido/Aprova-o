@@ -46,9 +46,15 @@
         }
         .image {
             display: block;
-            margin: 10px auto;
-            max-width: 100%;
+            margin: 10px;
+            width: 50%;
             height: auto;
+        }
+        .image-left {
+            float: left;
+        }
+        .image-right {
+            float: right;
         }
     </style>
 </head>
@@ -65,7 +71,7 @@
     <p>Email: {{ sala.email }}</p>
     <p>Site: <a href="{{ sala.site }}">{{ sala.site }}</a></p>
     
-    <img src="https://i.imgur.com/5OojAlJ.jpeg" alt="Imagem 1" class="image">
+    <img src="https://i.imgur.com/5OojAlJ.jpeg" alt="Imagem 1" class="image image-left">
     <p>Ambiente confortável para estudos.</p>
     
     <h2>Horários</h2>
@@ -75,7 +81,7 @@
         {% endfor %}
     </ul>
     
-    <img src="https://i.imgur.com/s2YxpHi.jpeg" alt="Imagem 2" class="image">
+    <img src="https://i.imgur.com/s2YxpHi.jpeg" alt="Imagem 2" class="image image-right">
     <p>Salas de estudo individualizadas.</p>
     
     <h2>Planos</h2>
@@ -90,7 +96,7 @@
         {% endfor %}
     </ul>
     
-    <img src="https://i.imgur.com/LG7eS8O.jpeg" alt="Imagem 3" class="image">
+    <img src="https://i.imgur.com/LG7eS8O.jpeg" alt="Imagem 3" class="image image-left">
     <p>Espaço para grupos de estudo.</p>
     
     <h2>Opções adicionais</h2>
@@ -99,16 +105,16 @@
     <p>{{ sala.telefone }}</p>
     <p>{{ sala.email }}</p>
     
-    <img src="https://i.imgur.com/GQcdhWw.jpeg" alt="Imagem 4" class="image">
+    <img src="https://i.imgur.com/GQcdhWw.jpeg" alt="Imagem 4" class="image image-right">
     <p>Ambiente climatizado e confortável.</p>
     
-    <img src="https://i.imgur.com/DWWEchE.jpeg" alt="Imagem 5" class="image">
+    <img src="https://i.imgur.com/DWWEchE.jpeg" alt="Imagem 5" class="image image-left">
     <p>Salas equipadas com internet de alta velocidade.</p>
     
-    <img src="https://i.imgur.com/Adhr3f8.jpeg" alt="Imagem 6" class="image">
+    <img src="https://i.imgur.com/Adhr3f8.jpeg" alt="Imagem 6" class="image image-right">
     <p>Ambiente tranquilo e silencioso.</p>
     
-    <img src="https://i.imgur.com/421Pu0K.jpeg" alt="Imagem 7" class="image">
+    <img src="https://i.imgur.com/421Pu0K.jpeg" alt="Imagem 7" class="image image-left">
     <p>Espaço reservado para estudos em grupo.</p>
 </body>
 </html>
