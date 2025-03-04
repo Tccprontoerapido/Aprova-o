@@ -28,6 +28,13 @@
             gap: 20px;
             font-size: 1.2em;
             color: black;
+            position: fixed;  /* Fixed position */
+            top: 0;
+            left: 0;
+            z-index: 1000;  /* Ensure it's above other content */
+        }
+        .spacer {
+            height: 60px; /* Adjust height to match the fixed header */
         }
         .nav a {
             color: black;
@@ -77,6 +84,7 @@
         <a href="#endereco">Endereço</a>
         <a href="#contato">Contato</a>
     </div>
+    <div class="spacer"></div>
     <div class="header">
         <div class="left">{{ sala.nome.split()[0] }}</div>
     </div>
