@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ sala.nome }}</title>
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
         .header {
             background-color: limegreen;
             width: 100%;
@@ -13,7 +16,6 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-family: 'Times New Roman', Times, serif;
             font-size: 1.5em;
             position: relative;
         }
@@ -24,7 +26,6 @@
             display: flex;
             justify-content: center;
             gap: 20px;
-            font-family: 'Times New Roman', Times, serif;
             font-size: 1.2em;
             color: black;
         }
@@ -37,7 +38,6 @@
             width: 100%;
             padding: 10px 0;
             text-align: center;
-            font-family: 'Times New Roman', Times, serif;
             font-size: 1.5em;
             color: black;
             display: flex;
@@ -84,24 +84,25 @@
         <div></div>
         <div class="right"></div>
     </div>
-    <p>Endereço: {{ sala.endereco }}</p>
-    <p>Telefone: {{ sala.telefone }}</p>
-    <p>Email: {{ sala.email }}</p>
-    <p>Site: <a href="{{ sala.site }}">{{ sala.site }}</a></p>
     
+    <!-- Main Content -->
     <img src="https://i.imgur.com/5OojAlJ.jpeg" alt="Imagem 1" class="image image-right">
     <p>Ambiente confortável para estudos.</p>
-    
-    <h2>Horários</h2>
-    <ul>
-        {% for turno, horario in sala.horarios.items() %}
-        <li>{{ turno.capitalize() }}: {{ horario }}</li>
-        {% endfor %}
-    </ul>
     
     <img src="https://i.imgur.com/s2YxpHi.jpeg" alt="Imagem 2" class="image image-left">
     <p>Salas de estudo individualizadas.</p>
     
+    <img src="https://i.imgur.com/LG7eS8O.jpeg" alt="Imagem 3" class="image image-right">
+    <p>Espaço para grupos de estudo.</p>
+    
+    <h2 id="sobre">Sobre</h2>
+    <p>Nosso espaço é dedicado ao seu sucesso. Aqui, o foco se intensifica, o conhecimento se aprofunda e a conquista se torna realidade.</p>
+    <p>Agende sua visita gratuita através do site de reservas: <a href="{{ sala.site }}">{{ sala.site }}</a></p>
+    
+    <h2 id="como-funciona">Como Funciona</h2>
+    <p>Para alugar uma cabine de estudo, entre em contato com a Aprovação Sala de Estudos pelo telefone ou email:</p>
+    
+    <!-- Information moved to the bottom -->
     <h2 id="planos">Planos</h2>
     <ul>
         {% for plano, valores in sala.planos.items() %}
@@ -114,15 +115,12 @@
         {% endfor %}
     </ul>
     
-    <img src="https://i.imgur.com/LG7eS8O.jpeg" alt="Imagem 3" class="image image-right">
-    <p>Espaço para grupos de estudo.</p>
-    
-    <h2 id="sobre">Sobre</h2>
-    <p>Nosso espaço é dedicado ao seu sucesso. Aqui, o foco se intensifica, o conhecimento se aprofunda e a conquista se torna realidade.</p>
-    <p>Agende sua visita gratuita através do site de reservas: <a href="{{ sala.site }}">{{ sala.site }}</a></p>
-    
-    <h2 id="como-funciona">Como Funciona</h2>
-    <p>Para alugar uma cabine de estudo, entre em contato com a Aprovação Sala de Estudos pelo telefone ou email:</p>
+    <h2 id="horarios">Horários</h2>
+    <ul>
+        {% for turno, horario in sala.horarios.items() %}
+        <li>{{ turno.capitalize() }}: {{ horario }}</li>
+        {% endfor %}
+    </ul>
     
     <h2 id="endereco">Endereço</h2>
     <p>{{ sala.endereco }}</p>
