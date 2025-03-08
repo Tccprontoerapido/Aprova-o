@@ -1,14 +1,14 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
-class AprovaçãoSaladeEstudos:
+class AprovacaoSaladeEstudos:
     def __init__(self):
-        self.nome = "Aprovação Sala de Estudos"
-        self.endereço = ""
+        self.nome = "APROVAÇÃO"
+        self.endereco = ""
         self.telefone = "5581997064169"
         self.email = "contato@example.com"
         self.site = "https:///"
-        self.horários = {
+        self.horarios = {
             "manha": "06h/12h",
             "tarde": "12h/18h",
             "noite": "18h/00h",
@@ -33,7 +33,7 @@ class AprovaçãoSaladeEstudos:
 
 @app.route('/')
 def index():
-    sala = AprovaçãoSaladeEstudos()
+    sala = AprovacaoSaladeEstudos()
     return render_template('index.html', sala=sala)
 
 if __name__ == "__main__":
