@@ -21,8 +21,8 @@
             width: 100%;
             padding: 10px 0;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
             font-size: 1.2em;
             color: black;
             position: fixed;
@@ -30,26 +30,22 @@
             left: 0;
             z-index: 1000;
         }
-        .spacer {
-            height: 60px;
+        .nav .logo {
+            padding-left: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: black;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
         }
         .nav a {
             color: black;
             text-decoration: none;
         }
-        .sub-header {
-            background-color: white;
-            width: 100%;
-            padding: 10px 0;
-            text-align: left;
-            font-size: 1.5em;
-            color: black;
-            padding-left: 20px;
-            font-weight: bold;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+        .spacer {
+            height: 60px;
         }
         .image {
             display: block;
@@ -70,16 +66,16 @@
 </head>
 <body>
     <div class="nav">
-        <a href="#sobre">Sobre</a>
-        <a href="#como-funciona">Como Funciona</a>
-        <a href="#planos">Planos</a>
-        <a href="#endereço">Endereço</a>
-        <a href="#contato">Contato</a>
+        <div class="logo">APROVAÇÃO</div>
+        <div class="nav-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#planos">Planos</a>
+            <a href="#endereço">Endereço</a>
+            <a href="#contato">Contato</a>
+        </div>
     </div>
     <div class="spacer"></div>
-    <div class="sub-header">
-        APROVAÇÃO
-    </div>
     <div class="header">
     </div>
     
