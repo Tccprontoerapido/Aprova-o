@@ -4,7 +4,7 @@ app = Flask(__name__)
 class AprovaçãoSaladeEstudos:
     def __init__(self):
         self.nome = "Aprovação Sala de Estudos"
-        self.endereco = ""
+        self.endereço = ""
         self.telefone = "5581997064169"
         self.email = "contato@example.com"
         self.site = "https:///"
