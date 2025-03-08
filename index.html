@@ -104,7 +104,6 @@
     </div>
     
     <!-- Main Content -->
-    <img src="https://i.imgur.com/5OojAlJ.jpeg" alt="Imagem 1" class="image image-left">
     <p>Ambiente confortável para estudos.</p>
     
     <img src="https://i.imgur.com/s2YxpHi.jpeg" alt="Imagem 2" class="image image-right">
@@ -135,7 +134,7 @@
     
     <h2 id="horários">Horários</h2>
     <ul>
-        {% for turno, horario in sala.horarios.items() %}
+        {% for turno, horario in sala.horários.items() %}
         <li>{{ turno.capitalize() }}: {{ horario }}</li>
         {% endfor %}
     </ul>
