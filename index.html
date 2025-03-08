@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ sala.nome }}</title>
+    <title>APROVAÇÃO</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -46,28 +46,11 @@
             background-color: white;
             width: 100%;
             padding: 10px 0;
-            text-align: center;
+            text-align: left; /* Align text to the left */
             font-size: 1.5em;
             color: black;
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 20px;
-            position: relative;
-        }
-        .sub-header .left {
-            font-size: 1.5em;
-            font-weight: bold;
-            position: absolute;
-            left: 20px;
-            top: 10px;
-        }
-        .sub-header .right {
-            font-size: 1em;
-            color: blue;
-        }
-        .sub-header .right a {
-            color: blue;
-            text-decoration: none;
+            padding-left: 20px; /* Add padding to the left */
+            font-weight: bold; /* Make the text bold */
         }
         .image {
             display: block;
@@ -87,20 +70,19 @@
     </style>
 </head>
 <body>
+    <div class="sub-header">
+        APROVAÇÃO
+    </div>
     <div class="nav">
         <a href="#sobre">Sobre</a>
         <a href="#como-funciona">Como Funciona</a>
         <a href="#planos">Planos</a>
-        <a href="#endereco">Endereço</a>
+        <a href="#endereço">Endereço</a>
         <a href="#contato">Contato</a>
     </div>
     <div class="spacer"></div>
     <div class="header">
         <!-- Removed the name from here -->
-    </div>
-    <div class="sub-header">
-        <div class="left">{{ sala.nome }}</div>
-        <div class="right"></div>
     </div>
     
     <!-- Main Content -->
