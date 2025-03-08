@@ -31,8 +31,16 @@
             z-index: 1000;
         }
         .nav .logo {
+            display: flex;
+            align-items: center;
             padding-left: 20px;
-            font-size: 1.5em;
+        }
+        .nav .logo img {
+            height: 1.2em; /* Adjust the height to match the font size */
+            margin-right: 10px;
+        }
+        .nav .logo span {
+            font-size: 1.2em;
             font-weight: bold;
             color: black;
         }
@@ -66,7 +74,10 @@
 </head>
 <body>
     <div class="nav">
-        <div class="logo">APROVAÇÃO</div>
+        <div class="logo">
+            <img src="https://i.imgur.com/tcCICOB.jpeg" alt="Logo">
+            <span>APROVAÇÃO</span>
+        </div>
         <div class="nav-links">
             <a href="#sobre">Sobre</a>
             <a href="#como-funciona">Como Funciona</a>
