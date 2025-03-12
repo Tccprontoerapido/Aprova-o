@@ -69,16 +69,22 @@
             padding: 5px; /* Reduced padding */
             border: 2px solid black; /* Added black border */
             margin-right: 20px; /* Added margin to move it away from the corner */
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
-        }
-        .contact-box:hover {
-            background-color: #ADFF2F; /* Matte lime green on hover */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
         }
         .contact-box a {
-            color: black;
+            color: transparent; /* Make the text invisible initially */
             text-decoration: none;
             font-weight: bold;
             font-size: 0.8em; /* Reduced font size */
+            transition: color 0.3s; /* Smooth transition for text visibility */
+        }
+        .contact-box:hover,
+        .contact-box.scroll-active {
+            background-color: #ADFF2F; /* Matte lime green on hover and scroll */
+        }
+        .contact-box:hover a,
+        .contact-box.scroll-active a {
+            color: black; /* Make the text visible on hover and scroll */
         }
         .spacer {
             height: 60px;
@@ -132,6 +138,16 @@
             font-size: 1.2em;
         }
     </style>
+    <script>
+        document.addEventListener('scroll', function() {
+            const contactBox = document.querySelector('.contact-box');
+            if (window.scrollY > 0) {
+                contactBox.classList.add('scroll-active');
+            } else {
+                contactBox.classList.remove('scroll-active');
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="nav">
