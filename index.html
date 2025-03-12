@@ -69,19 +69,25 @@
             padding: 5px; /* Reduced padding */
             border: 2px solid black; /* Added black border */
             margin-right: 20px; /* Added margin to move it away from the corner */
-            transition: background-color 0.3s, border 0.3s; /* Smooth transition for hover effect */
+            transition: background-color 0.3s, border 0.3s, color 0.3s; /* Smooth transition for hover effect */
         }
         .contact-box a {
-            color: black; /* Keep text always visible */
+            color: black; /* Default text color */
             text-decoration: none;
             font-weight: bold;
             font-size: 0.8em; /* Reduced font size */
+            transition: color 0.3s; /* Smooth transition for text color */
         }
         .contact-box:hover,
         .contact-box:active,
         .contact-box.scroll-active {
             background-color: #ADFF2F; /* Matte lime green on hover, touch, and scroll */
             border: none; /* Remove border */
+        }
+        .contact-box:hover a,
+        .contact-box:active a,
+        .contact-box.scroll-active a {
+            color: white; /* Change text color to white on hover, touch, and scroll */
         }
         .spacer {
             height: 60px;
