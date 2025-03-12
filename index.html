@@ -66,10 +66,13 @@
             color: #ADFF2F; /* Lime green color on hover */
         }
         .contact-box {
-            background-color: #ADFF2F; /* Lime green color */
             padding: 5px; /* Reduced padding */
-            border-radius: 5px;
+            border: 2px solid black; /* Added black border */
             margin-right: 20px; /* Added margin to move it away from the corner */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+        .contact-box:hover {
+            background-color: #ADFF2F; /* Matte lime green on hover */
         }
         .contact-box a {
             color: black;
