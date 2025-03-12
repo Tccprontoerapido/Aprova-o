@@ -69,7 +69,7 @@
             padding: 5px; /* Reduced padding */
             border: 2px solid black; /* Added black border */
             margin-right: 20px; /* Added margin to move it away from the corner */
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            transition: background-color 0.3s, border 0.3s; /* Smooth transition for hover effect */
         }
         .contact-box a {
             color: black; /* Keep text always visible */
@@ -78,8 +78,10 @@
             font-size: 0.8em; /* Reduced font size */
         }
         .contact-box:hover,
+        .contact-box:active,
         .contact-box.scroll-active {
-            background-color: #ADFF2F; /* Matte lime green on hover and scroll */
+            background-color: #ADFF2F; /* Matte lime green on hover, touch, and scroll */
+            border: none; /* Remove border */
         }
         .spacer {
             height: 60px;
